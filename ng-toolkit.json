@@ -1,0 +1,13 @@
+{
+  "serverless": {
+    "provider": "aws",
+    "project": "laced",
+    "skipInstall": false,
+    "directory": ".",
+    "clientProject": "laced",
+    "serverless": {
+      "aws": {},
+      "gcloud": {}
+    }
+  }
+}
