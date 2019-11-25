@@ -1,19 +1,22 @@
+@import'../../../styles.sass'
+
 .container
   display: flex
   flex-direction: row
   justify-content: space-around
   max-width: 100vw
+  min-width: 100%
   height: 300px
   max-height: 300px
-  margin: 0em 1em 1em 1em
+  margin: 0em
+  font-family: 'Open Sans', sans-serif
 
 .col
-  width: 500px
-  max-width: 500px
+  width: 300px
+  max-width: 300px
   display: flex
   flex-direction: column
   align-content: center
-  font-family: 'Covered By Your Grace', cursive
   justify-content: center
   text-align: center
   font-size: 30px
@@ -25,17 +28,29 @@
     flex-direction: row
     justify-content: flex-end
     padding: 10px
-    color: red
-    font-family: 'Sedgwick Ave Display', cursive
+    color: black
+    font-size: 15px
+    font-family: 'Open Sans', sans-serif
+    text-align: center
+    justify-content: center
 
+.product-1
+  display: flex
+  flex-direction: column
+  justify-content: center
+  text-align: center
 
+.product-name
+  color: black
+  font-size: 13px
+  font-weight: bolder
 
-.col:nth-child(even)
-  border-right: 1px solid lightgray
-  border-left: 1px solid lightgray
+.product-description
+  color: lightgray
+  font-size: 11px
 
 img
-  max-width: 400px
+  max-width: 300px
 .product-1 .product-2 .product-3
   overflow: hidden
 
@@ -43,17 +58,18 @@ img
   display: flex
   flex-direction: column
   justify-content: center
+  align-self: flex-end
   height: 100px
   max-height: 100px
   width: 100px
   max-width: 100px
-  border: 1px solid lightgray
   border-radius: 50px
   align-content: center
   text-align: center
   font-size: 30px
   font-weight: 700
   margin: 15px
+
 .arrow-right
   display: flex
   flex-direction: column
@@ -62,7 +78,6 @@ img
   max-height: 100px
   width: 100px
   max-width: 100px
-  border: 1px solid lightgray
   border-radius: 50px
   align-content: center
   text-align: center
@@ -82,3 +97,28 @@ img
 .price .sold-out
   color: lightgray
 
+button
+  align-self: center
+  width: 150px
+  height: 30px
+  background-color: black
+  color: white
+  border-radius: 15px
+  cursor: pointer
+
+
+@media(min-width: $break-sm)
+  .container
+    width: 320px
+    font-size: 15px
+    min-width: unset
+    width: 340px
+    .col
+
+.product-1
+  display:flex
+  justify-content: space-between
+img
+  height: 100px
+button
+  width: 60px

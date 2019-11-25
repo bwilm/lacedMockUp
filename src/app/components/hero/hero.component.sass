@@ -1,11 +1,27 @@
+@import'../../../styles.sass'
+
 .container
   display: flex
-  max-width: 100vw
-  height: 800px
-  max-height: 800px
-  background-image: url('../../../assets/hero.png')
+  height: 500px
+  max-height: 500px
   background-repeat: no-repeat
   background-size: cover
+  justify-content: space-around
+
+.col
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+img
+  height: 500px
+  max-height: 500px
+
+.arrow
+  width: fit-content
+  max-width: 20px
+  font-size: 30px
+  font-weight: bolder
 
 
 .welcome
@@ -17,10 +33,13 @@
   margin: 5em
   text-align: center
   justify-content: center
-  font-family: 'Rock Salt', cursive
+  font-family: 'Covered By Your Grace', cursive
+
+  h1
+    font-size: 50px
 
   & .welcome-text
-     font-family: 'Covered By Your Grace', cursive
+     font-family: 'Open Sans', sans-serif
      font-size: 20px
 
 
@@ -29,7 +48,34 @@
     width: 200px
     max-width: 200px
     height: 50px
-    border-radius: 15px
+    border-radius: 25px
     font-size: 15px
     align-self: center
-    background-color: white
+    background-color: black
+    color: white
+
+
+@media(max-width: $break-large)
+  .col
+    max-width: 400px
+    .welcome
+      margin: 0.5em
+img
+  height: 350px
+
+
+@media(min-width: $break-sm)
+  .container
+    flex-direction: column
+    width: 320px
+    font-size: 15px
+.welcome
+  width: 320px
+  h1
+    font-size: 25px
+.col
+  .arrow
+    display: none
+
+img
+  height: 200px
